@@ -64,3 +64,6 @@ class DjangoCommonSettings(BaseConfig):
     ALLOWED_HOSTS: list = Field(default=['localhost', '0.0.0.0'], pc_transformer=DjangoHostsPCTransformer())
     CSRF_TRUSTED_ORIGINS: list = Field(required=False)
 
+    CORS_ALLOWED_ORIGINS: list = Field(required=False) # for corsheaders 
+    CORS_ALLOW_CREDENTIALS: bool = Field(default=True) # for corsheaders 
+

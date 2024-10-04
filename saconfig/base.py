@@ -1,5 +1,4 @@
 import os
-import inspect
 import typing
 from dataclasses import dataclass
 from .exceptions import *
@@ -175,6 +174,9 @@ class BaseConfig:
         for k, v in self._data.items():
             setattr(destination, k, v)
 
+    def items(self):
+        return self._data.items()
+    
 
 def generate_env_example(*configs: BaseConfig, output="example.env"):
     example = ""

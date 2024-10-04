@@ -175,3 +175,8 @@ print(mysql.as_django())
 ```
 {'ENGINE': 'django.db.backends.mysql', 'USER': 'username', 'PASSWORD': 'pass', 'HOST': '0.0.0.0', 'PORT': '3306', 'NAME': 'test_db'}
 ```
+For django basic settings its posible to use:
+```python3
+for k, v in DjangoCommonSettings().items():
+    globals()[k] = v
+```

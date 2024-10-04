@@ -14,7 +14,7 @@ project_urls = {
 
 setup(
     name='saconfig',
-    version='0.0.1',
+    version='0.0.2',
     author='Sidq',
     author_email='abba.dmytro@gmail.com',
     description='Flexible config module to manage env variables',

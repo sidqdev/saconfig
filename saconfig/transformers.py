@@ -52,5 +52,6 @@ class URLPCTransformer(PCTransformer):
 class DjangoHostsPCTransformer(PCTransformer):
     def parse(self, hosts: list) -> Dict:
         return {
-            "CSRF_TRUSTED_ORIGINS": [f"https://{x}" for x in hosts] + [f"http://{x}" for x in hosts]
+            "CSRF_TRUSTED_ORIGINS": [f"https://{x}" for x in hosts] + [f"http://{x}" for x in hosts],
+            "CORS_ALLOWED_ORIGINS": [f"https://{x}" for x in hosts] + [f"http://{x}" for x in hosts]
         }
