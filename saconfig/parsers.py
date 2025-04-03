@@ -36,7 +36,7 @@ def dict_parser(value: str, value_type: typing.Callable=str) -> dict:
         return value
     data = dict()
     for r in value.split(','):
-        k, v = r.split(":")
+        k, v = r.split(":", maxsplit=1)
         data[k] = value_type(v)
     return data
 
